@@ -1,0 +1,21 @@
+{
+    "name": "node_shri_homework",
+    "type": "module",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "ping": "node cli/ping/index.js",
+        "generate-csv-0.01gb": "node cli/generateInput/index.js 0.01",
+        "generate-csv-0.1gb": "node cli/generateInput/index.js 0.1",
+        "generate-csv-1gb": "node cli/generateInput/index.js 1",
+        "generate-csv-5gb": "node cli/generateInput/index.js 5",
+        "generate-csv-0.01gb-errors": "node cli/generateInput/index.js 0.01 --generate-errors",
+        "generate-csv-0.1gb-errors": "node cli/generateInput/index.js 0.1 --generate-errors",
+        "generate-csv-1gb-errors": "node cli/generateInput/index.js 1 --generate-errors",
+        "generate-csv-5gb-errors": "node cli/generateInput/index.js 5 --generate-errors",
+        "send-request-v1": "node cli/sendRequest/index.js http://localhost:3000/v1/stats:aggregate",
+        "send-request-v2": "node cli/sendRequest/index.js http://localhost:3000/v2/stats:aggregate",
+        "send-request-v2-stream": "node cli/sendRequest/index.js http://localhost:3000/v2/stats:aggregate_as_stream"
+    }
+}

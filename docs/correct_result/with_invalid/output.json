@@ -1,0 +1,12 @@
+{
+    "total_spend_galactic": 147207405.5,
+    "rows_affected": 294531,
+    "less_spent_at": 164,
+    "big_spent_at": 185,
+    "less_spent_value": 352523.5,
+    "big_spent_value": 449689.5,
+    "average_spend_galactic": 499.8027559068485,
+    "big_spent_civ": "monsters",
+    "less_spent_civ": "humans",
+    "ivalid_rows": 8869
+}

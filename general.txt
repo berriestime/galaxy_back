@@ -1,0 +1,21 @@
+
+import cp from "node:child_process";
+
+const server = cp.spawn("node", ["./src/server.js"]);
+
+server.stdout.on('data', (data) => {
+  console.log(`stdout: ${data}`);
+});
+
+server.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+server.on('close', (code) => {
+  console.log(`child process exited with code ${code}`);
+});
+
+cp.execSync("npm run generate-csv-0.01gb", { stdio: "inherit" });
+cp.execSync("npm run send-request-v2", { stdio: "inherit" });
+
+server.kill();
